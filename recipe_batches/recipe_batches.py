@@ -5,11 +5,11 @@ import math
 def recipe_batches(recipe, ingredients):
   multiples = []
 
-  for i in recipe:
-    if i not in ingredients.keys():
+  for ingredient in recipe:
+    if ingredient not in ingredients.keys():
         return 0
     else:
-        multiples.append(ingredients[i] // recipe[i])
+        multiples.append(ingredients[ingredient] // recipe[ingredient])
 
   return(min(multiples))
 
